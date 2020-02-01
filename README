@@ -1,8 +1,6 @@
-This directory includes scripts used to generate tables of abelian varieties over
+This repository includes scripts used to generate tables of abelian varieties over
 finite fields for the L-Functions and Modular Forms Database (http://www.lmfdb.org).
-Scripts associated to zeta functions of abelian varieties
 
 test_suite.sage: Some consistency checks for zeta functions of abelian varieties.
 
-table-maker.sage: Build tables of Weil polynomials for the LMFDB (contributed by
-   Taylor Dupuy).
+isogeny_classes.sage: Build tables of isogeny classes for the LMFDB

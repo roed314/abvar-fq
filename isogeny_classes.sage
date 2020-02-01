@@ -43,13 +43,14 @@ AUTHORS:
 EXAMPLES:
 
 Currently, the lmfdb can only be imported from the lmfdb folder, and then this file must be attached
-from the root-unitary folder.  The actual computation must be done from the lmfdb folder,
+from the abvar-fq folder.  The actual computation must be done from the lmfdb folder,
 since new instances of the `PostgresDatabase` object must be created.
-The following example assumes that the lmfdb and root unitary repositories are installed side-by-side::
+The following example assumes that the lmfdb and abvar-fq repositories are installed side-by-side::
 
     sage: cd lmfdb
-    sage: cd ../root-unitary
-    sage: %attach table_functions.sage
+    sage: from lmfdb import db
+    sage: cd ../abvar-fq
+    sage: %attach isogeny_classes.sage
     sage: IC = IsogenyClasses()
     sage: cd ../lmfdb
     sage: IC.run_parallel(4)
