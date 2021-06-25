@@ -19,14 +19,14 @@ def check_weil3(q):
     comppolys = set()
     R.<t> = ZZ[]
     upper0 = (2*RR(q).sqrt()).floor()
-    #if q.is_square():
-    #    upper0 -= 1
+    if q.is_square():
+        upper0 -= 1
     lower0 = -upper0
     for beta in [lower0..upper0]:
         comppolys.add(wp((t^2-q)^2*(t^2+beta*t+q)))
     upper1 = (6*RR(q).sqrt()).floor()
-    #if q.is_square():
-    #    upper1 -= 1
+    if q.is_square():
+        upper1 -= 1
     lower1 = -upper1
     for a1 in [lower1..upper1]:
         lower2 = (4*RR(q).sqrt()*a1.abs()).ceil() - 9*q
